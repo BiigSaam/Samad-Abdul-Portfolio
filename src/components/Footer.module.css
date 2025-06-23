@@ -1,0 +1,90 @@
+.footer {
+  background-color: rgb(49, 97, 185);
+  color: #fff;
+  font-size: 0.95rem;
+}
+
+.container {
+  padding: 3rem 1rem 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.column h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  color: #111;
+}
+
+.column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.column li {
+  margin-bottom: 0.5rem;
+}
+
+.column a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+.column a:hover {
+  text-decoration: none;
+  color: #ff9d00;
+}
+
+.bottomBar {
+  margin-top: 2rem;
+  text-align: center;
+  border-top: 1px solid #ddd;
+  padding-top: 1rem;
+  color:rgb(255, 253, 253);
+}
+
+@media (max-width: 480px) {
+  .footer .container {
+    grid-template-columns: 1fr;
+    padding: 2rem 1rem 1rem;
+    text-align: center;
+  }
+
+  .column h4 {
+    font-size: 1rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .column li {
+    margin-bottom: 0.4rem;
+  }
+
+  .bottomBar {
+    font-size: 0.85rem;
+    margin-top: 1.5rem;
+    padding-top: 0.8rem;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .footer .container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    padding: 2.5rem 1rem 1rem;
+  }
+
+  .column h4 {
+    font-size: 1.05rem;
+  }
+
+  .bottomBar {
+    font-size: 0.9rem;
+    margin-top: 1.8rem;
+    padding-top: 0.9rem;
+  }
+}
+
