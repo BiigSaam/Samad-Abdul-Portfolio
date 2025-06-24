@@ -5,7 +5,7 @@
 }
 
 .footer .container {
-  max-width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 3rem 1rem 1rem;
   display: grid;
@@ -49,6 +49,7 @@
   font-size: 0.95rem;
 }
 
+/* Responsive */
 @media (max-width: 480px) {
   .footer .container {
     grid-template-columns: 1fr;
@@ -92,7 +93,7 @@
 
 @media (min-width: 769px) and (max-width: 1023px) {
   .footer .container {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
     padding: 3rem 1rem 1rem;
   }
@@ -107,7 +108,6 @@
 
   .bottomBar {
     font-size: 0.95rem;
-    margin-top: 2rem;
-    padding-top: 1rem;
+    margin-top: 2
   }
 }
