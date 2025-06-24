@@ -4,13 +4,14 @@
   font-size: 0.95rem;
 }
 
-.container {
+.footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 3rem 1rem 1rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .column h4 {
@@ -31,11 +32,11 @@
 
 .column a {
   text-decoration: none;
-  color: rgb(255, 255, 255);
+  color: #fff;
+  transition: color 0.2s ease;
 }
 
 .column a:hover {
-  text-decoration: none;
   color: #ff9d00;
 }
 
@@ -44,7 +45,8 @@
   text-align: center;
   border-top: 1px solid #ddd;
   padding-top: 1rem;
-  color:rgb(255, 253, 253);
+  color: rgb(255, 253, 253);
+  font-size: 0.95rem;
 }
 
 @media (max-width: 480px) {
@@ -88,3 +90,24 @@
   }
 }
 
+@media (min-width: 769px) and (max-width: 1023px) {
+  .footer .container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 3rem 1rem 1rem;
+  }
+
+  .column h4 {
+    font-size: 1.1rem;
+  }
+
+  .column li {
+    margin-bottom: 0.5rem;
+  }
+
+  .bottomBar {
+    font-size: 0.95rem;
+    margin-top: 2rem;
+    padding-top: 1rem;
+  }
+}

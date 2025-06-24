@@ -6,6 +6,7 @@
   max-width: 1000px;
   margin: 0 auto;
   padding: 4rem 1rem;
+  box-sizing: border-box;
 }
 
 .title {
@@ -29,7 +30,7 @@
 .grid {
   display: grid;
   gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
 
 .card {
@@ -73,8 +74,7 @@
 }
 
 .softSkillsSection {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  margin: 3rem 0;
 }
 
 .softGrid {
@@ -106,7 +106,7 @@
 
 @media (max-width: 480px) {
   .container {
-    padding: 3rem 1rem;
+    padding: 2.5rem 1rem;
   }
 
   .title {
@@ -133,7 +133,7 @@
   }
 
   .softGrid {
-    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 0.5rem;
     padding: 0.8rem;
   }
@@ -166,7 +166,7 @@
   }
 
   .softGrid {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   }
 
   .softTag {
@@ -184,7 +184,7 @@
   }
 
   .cardTitle {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
   }
 
   .hardTag {

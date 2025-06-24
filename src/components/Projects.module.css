@@ -6,6 +6,7 @@
   max-width: 1000px;
   padding: 4rem 1rem;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .title {
@@ -78,7 +79,7 @@
   }
 
   .image {
-    height: 150px;
+    height: 140px;
   }
 
   .content {
@@ -97,7 +98,7 @@
 
 @media (min-width: 481px) and (max-width: 768px) {
   .container {
-    padding: 3rem 1rem;
+    padding: 3rem 1.2rem;
   }
 
   .title {
@@ -106,7 +107,7 @@
   }
 
   .grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
   }
 
@@ -119,7 +120,7 @@
   }
 
   .category {
-    font-size: 0.9rem;
+    font-size: 0.88rem;
   }
 }
 
@@ -147,6 +148,6 @@
   }
 
   .category {
-    font-size: 0.92rem;
+    font-size: 0.9rem;
   }
 }
