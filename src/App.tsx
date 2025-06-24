@@ -11,15 +11,17 @@ import Contact from './components/Contact';
 
 function App() {
   return (
-    <div>
+    <div className='page-wrapper'>
       <Header />
-      <Hero />
-      <About />
-      <Education />
-      <Projects />
-      <Experience />
-      <Skills />
-      <Contact />
+      <main className="main-content">
+        <Hero />
+        <About />
+        <Education />
+        <Projects />
+        <Experience />
+        <Skills />
+        <Contact />
+      </main>
       <Footer />
     </div>
   );
