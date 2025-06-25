@@ -1,4 +1,11 @@
+# robots.txt — Portfolio de Samad Abdul
+
 User-agent: *
 Allow: /
 
+# Ne pas indexer les fichiers techniques
+Disallow: /vite.svg
+Disallow: /*.pdf$
+
+# Emplacement du sitemap pour le crawl
 Sitemap: https://portfolio-samadabdul.netlify.app/sitemap.xml
