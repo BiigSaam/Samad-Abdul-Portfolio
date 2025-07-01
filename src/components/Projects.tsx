@@ -8,6 +8,11 @@ type Project = {
 
 const projectList: Project[] = [
   {
+    name: "Machine Learning MNIST",
+    image: "/images/mnist.png",
+    link: "https://mnist-web-three.vercel.app/"
+  },
+  {
     name: "Laylow Green Pill",
     image: "/images/green_pill_laylow.png",
     link: "https://laylow-creative-album.netlify.app/"
