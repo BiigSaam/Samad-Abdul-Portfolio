@@ -21,7 +21,7 @@ const About = () => {
             En dehors du développement, je suis passionné de musculation, de volleyball, de jeux vidéo, de voyage et de cinéma. Ces activités me permettent d’équilibrer ma vie personnelle et professionnelle, en cultivant à la fois l’endurance, l’esprit d’équipe, la curiosité et la créativité.
           </p>
           <p className={styles.cvLink}>
-            <a href="/CV_Samad_ABDUL.pdf" target="_blank" rel="noopener noreferrer">
+            <a href="/CV-Samad_ABDUL-Alternance_Developpeur_full_stack.pdf" target="_blank" rel="noopener noreferrer">
               📄 Télécharger mon CV
             </a>
           </p>
