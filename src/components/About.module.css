@@ -15,8 +15,8 @@
 }
 
 .avatar {
-  width: 275px;
-  height: 275px;
+  width: 290px;
+  height: 290px;
   object-fit: cover;
   border-radius: 50%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -72,8 +72,8 @@
   }
 
   .avatar {
-    width: 150px;
-    height: 150px;
+    width: 160px;
+    height: 160px;
   }
 
   .title {
