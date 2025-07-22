@@ -47,7 +47,7 @@ const Contact = () => {
         )}
 
         <div className={styles.links}>
-          <a href="/CV-Samad_ABDUL-Alternance_Developpeur_full_stack.pdf" target="_blank" rel="noopener noreferrer">📄 Télécharger mon CV</a>
+          <a href="/CV-Samad_ABDUL-Alternance_Développeur_full_stack.pdf" target="_blank" rel="noopener noreferrer">📄 Télécharger mon CV</a>
         </div>
       </div>
     </section>
