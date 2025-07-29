@@ -11,10 +11,10 @@ type Experience = {
 
 const experiences: Experience[] = [
   {
-    role: "Développeur Full Stack - Alternance",
+    role: "Développeur Full Stack - Stage Alterné",
     company: "Komdab",
     date: "Déc 2024 – Avr 2025",
-    location: "Distanciel",
+    location: "Paris, France",
     description: "Automatisation de tâches avec création d’endpoints pour la plateforme Komdab, gestion des incidents SAV",
     stack: "Stack : JavaScript (ES6), Node.js",
   },
@@ -22,7 +22,7 @@ const experiences: Experience[] = [
     role: "Développeur Full Stack - Stage de fin d’études",
     company: "Novus Systems",
     date: "Mars 2024 – Août 2024",
-    location: "Noisy-le-Grand",
+    location: "Noisy-le-Grand, France",
     description: "Conception et développement from scratch d'un logiciel de gestion des activités des consultants (CRA)",
     stack: "Stack : HTML, CSS, JavaScript, PHP, MySQL",
   },
@@ -30,7 +30,7 @@ const experiences: Experience[] = [
     role: "Développeur Full Stack - Stage de fin d’année",
     company: "DigitAsso",
     date: "Avr 2023 – Juil 2023",
-    location: "Chatou",
+    location: "Chatou, France",
     description: "Refonte du module boutique pour les plateformes communautaires, création de nouvelles fonctionnalités pour la gestion des produits et des commandes",
     stack: "Stack : Vue.js, HTML, CSS, JavaScript, MongoDB, Git",
   }
