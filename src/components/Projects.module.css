@@ -30,6 +30,11 @@
   overflow: hidden;
   background-color: #f9f9f9;
   transition: transform 0.3s ease;
+
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-self: stretch;
 }
 
 .card:hover {
@@ -38,13 +43,18 @@
 
 .image {
   width: 100%;
-  height: 180px;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
+  flex-shrink: 0;
 }
 
 .content {
+  flex: 1;
   padding: 1rem;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .name {
@@ -55,17 +65,19 @@
 }
 
 .description {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: #666;
   margin-top: 0.5rem;
   line-height: 1.4;
+  flex-grow: 1;
 }
 
 .category {
-  font-size: 0.95rem;
+  font-size: 0.8rem;
   color: #666;
 }
 
+/* Mobile -480px */
 @media (max-width: 480px) {
   .container {
     padding: 2.5rem 1rem;
@@ -82,11 +94,10 @@
   }
 
   .card {
-    border-radius: 8px;
-  }
-
-  .image {
-    height: 140px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-self: stretch;
   }
 
   .content {
@@ -98,11 +109,17 @@
     margin-top: 0.4rem;
   }
 
+  .description {
+    font-size: 0.9rem;
+    margin-top: 0.3rem;
+  }
+
   .category {
-    font-size: 0.85rem;
+    font-size: 0.75rem;
   }
 }
 
+/* Tablette 481px - 768px */
 @media (min-width: 481px) and (max-width: 768px) {
   .container {
     padding: 3rem 1.2rem;
@@ -118,19 +135,28 @@
     gap: 1.5rem;
   }
 
-  .image {
-    height: 160px;
+  .card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-self: stretch;
   }
 
   .name {
     font-size: 1.1rem;
   }
 
+  .description {
+    font-size: 0.93rem;
+    margin-top: 0.4rem;
+  }
+
   .category {
-    font-size: 0.88rem;
+    font-size: 0.78rem;
   }
 }
 
+/* Desktop moyen 769px - 1023px */
 @media (min-width: 769px) and (max-width: 1023px) {
   .container {
     padding: 3.5rem 1.5rem;
@@ -146,15 +172,23 @@
     gap: 1.8rem;
   }
 
-  .image {
-    height: 170px;
+  .card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-self: stretch;
   }
 
   .name {
     font-size: 1.15rem;
   }
 
+  .description {
+    font-size: 0.92rem;
+    margin-top: 0.2rem;
+  }
+
   .category {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 }
