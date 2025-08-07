@@ -13,7 +13,7 @@ const experiences: Experience[] = [
   {
     role: "Développeur Full Stack - Stage Alterné",
     company: "Komdab",
-    date: "Déc 2024 – Avr 2025",
+    date: "Déc 2024 – Mai 2025",
     location: "Paris, France",
     description: "Automatisation de tâches avec création d’endpoints pour la plateforme Komdab, gestion des incidents SAV",
     stack: "Stack : JavaScript (ES6), Node.js",
