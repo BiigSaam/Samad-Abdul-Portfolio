@@ -11,6 +11,14 @@ type Experience = {
 
 const experiences: Experience[] = [
   {
+    role: "Développeur Full Stack - Alternance",
+    company: "Declaraid",
+    date: "Sept 2025 – Aujourd’hui",
+    location: "Paris, France",
+    description: "Participation au développement du produit declaraid, intégration avec APIs partenaires, maintenance sur les retouts clients et contribution à l'amélioration continue du produit",
+    stack: "Stack : JavaScript (ES6), Vue.js, Node.js",
+  },
+  {
     role: "Développeur Full Stack - Stage Alterné",
     company: "Komdab",
     date: "Déc 2024 – Mai 2025",

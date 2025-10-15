@@ -20,7 +20,7 @@ const hardSkills: SkillCategory[] = [
   },
   {
     title: "Méthodologies / Tests",
-    items: ["Agile", "SCRUM", "TDD", "Cypress"],
+    items: ["Agile", "SCRUM", "TDD", "Cypress", "Jest", "Postman"],
   },
   {
     title: "Autres",
@@ -29,8 +29,9 @@ const hardSkills: SkillCategory[] = [
 ]
 
 const softSkills = [
-  "Résolution de problèmes", "Veille technologique", "Esprit d’équipe",
-  "Polyvalence", "Autonomie", "Assiduité", "Communication"
+  "Innovation", "Veille technologique", "Esprit d’équipe", 
+  "Feedback constructif", "Polyvalence", "Autonomie",
+  "Assiduité", "Communication", "Créativité",
 ]
 
 const Skills = () => {
