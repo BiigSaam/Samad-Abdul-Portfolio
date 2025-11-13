@@ -9,8 +9,8 @@ const Footer = () => {
         <div className={styles.column}>
           <h4>À propos</h4>
           <p>
-            Développeur Full Stack passionné par la création et la maintenance de solutions web efficaces, modernes et durables.<br />
-            Disponibilité immédiate pour une alternance de 12 mois.
+            Développeur Full Stack qui conçoit et déploie des expériences web modernes, performantes et pensées pour durer.<br />
+            J’accompagne entrepreneurs, startups et entreprises à transformer leurs idées en produits digitaux performants et prêts à scaler.
           </p>
         </div>
 
