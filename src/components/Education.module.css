@@ -1,5 +1,5 @@
 .education {
-  background-color: #f8f8f8;
+  background-color: var(--blue-light);
 }
 
 .container {
@@ -12,171 +12,185 @@
 .title {
   text-align: center;
   font-size: 2.5rem;
+  font-family: var(--font-title);
   font-weight: bold;
   margin-bottom: 3rem;
+  color: var(--blue-dark);
+  position: relative;
+}
+
+.title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: var(--orange-accent);
+  border-radius: 2px;
+  margin: 0.9rem auto 0 auto;
 }
 
 .timeline {
   position: relative;
-  padding-left: 2rem;
-  border-left: 3px solid #ccc;
+  padding-left: 2.6rem;
+  border-left: none;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -1.8rem;
+  width: 9px;
+  height: 100%;
+  border-radius: 7.5px;
+  background: radial-gradient(circle at 60% 12%, var(--orange-accent) 12%, var(--blue-primary) 78%);
+  box-shadow: 0 0 18px 3px var(--blue-primary);
+  opacity: 0.86;
+  z-index: 1;
 }
 
 .entry {
   position: relative;
-  margin-bottom: 2.5rem;
-  padding-left: 1.5rem;
+  margin-bottom: 2.6rem;
+  padding-left: 1.7rem;
+  opacity: 0;
+  animation: fadeup 0.8s cubic-bezier(.23,.97,.52,1.01) forwards;
+}
+
+.entry:nth-child(1) { animation-delay: 0.1s; }
+.entry:nth-child(2) { animation-delay: 0.3s; }
+.entry:nth-child(3) { animation-delay: 0.5s; }
+
+@keyframes fadeup {
+  from { opacity: 0; transform: translateY(30px);}
+  to   { opacity: 1; transform: translateY(0);}
 }
 
 .dot {
   position: absolute;
-  left: -0.75rem;
-  top: 0.3rem;
-  width: 15px;
-  height: 15px;
-  background-color: #ff9d00;
+  left: -1.8rem;
+  top: 0.38rem;
+  width: 46px;
+  height: 46px;
+  background: var(--white);
   border-radius: 50%;
-  border: 2px solid white;
-  box-shadow: 0 0 0 3px #ff9d0044;
+  border: 3px solid var(--blue-primary);
+  box-shadow: 0 0 0 5px var(--orange-accent), 0 2px 10px rgba(23,36,71,0.10);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  transition: box-shadow 0.25s;
+}
+
+.dot:hover {
+  box-shadow: 0 0 0 7px var(--orange-accent), 0 4px 22px rgba(23,36,71,0.13);
+}
+
+.logo {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  filter: grayscale(0) drop-shadow(0 1px 2px rgba(18,45,77,0.09));
 }
 
 .content {
-  background: white;
-  padding: 1rem 1.25rem;
-  border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  background: var(--white);
+  padding: 1.25rem 1.25rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(23,36,71,0.06);
 }
 
 .degree {
-  font-size: 1.1rem;
-  font-weight: bold;
-  margin-bottom: 0.3rem;
+  font-family: var(--font-title);
+  font-size: 1.16rem;
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+  color: var(--blue-primary);
 }
 
 .school {
+  font-family: var(--font-body);
   font-style: italic;
-  margin-bottom: 0.2rem;
-  color: #333;
+  margin-bottom: 0.18rem;
+  color: var(--blue-dark);
+  font-size: 1.01rem;
 }
 
 .details {
-  color: #777;
-  font-size: 0.9rem;
+  color: var(--gray-text);
+  font-size: 0.92rem;
+  font-family: var(--font-body);
 }
 
 /* ------- Mobile Portrait ------- */
 @media (max-width: 480px) {
   .container {
-    padding: 2rem 1rem;
+    padding: 2.5rem 0.8rem; 
+    max-width: 90vw;
   }
-
   .title {
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    margin-bottom: 1.8rem;
   }
-
   .timeline {
-    padding-left: 1.25rem;
-    border-left: 2px solid #ccc;
+    padding-left: 2.8rem;
+    position: relative;
   }
-
-  .entry {
-    padding-left: 1rem;
+  .timeline::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0.5rem;
+    width: 7px;
+    height: 100%;
+    border-radius: 7px;
+    background: radial-gradient(circle at 60% 12%, var(--orange-accent) 12%, var(--blue-primary) 80%);
+    opacity: 0.92;
+    z-index: 1;
   }
-
   .dot {
-    left: -0.6rem;
-    width: 12px;
-    height: 12px;
-    box-shadow: 0 0 0 2px #ff9d0044;
+    width: 30px;
+    height: 30px;
+    left: -0.69rem;
+    top: 0.3rem;
   }
-
+  .logo {
+    width: 20px;
+    height: 20px;
+  }
   .content {
-    padding: 0.8rem 1rem;
+    padding: 0.8rem 0.6rem;
   }
-
   .degree {
-    font-size: 0.95rem;
+    font-size: 1rem;
   }
-
-  .school,
-  .details {
+  .school, .details {
     font-size: 0.8rem;
   }
 }
 
 /* ------- Mobile paysage / Tablette ------- */
 @media (min-width: 481px) and (max-width: 768px) {
-  .container {
-    padding: 3rem 1.2rem;
-  }
-
-  .title {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-  }
-
-  .timeline {
-    padding-left: 1.5rem;
-  }
-
-  .dot {
-    left: -0.65rem;
-    width: 13px;
-    height: 13px;
-  }
-
-  .content {
-    padding: 0.9rem 1.1rem;
-  }
-
-  .degree {
-    font-size: 1rem;
-  }
-
-  .school {
-    font-size: 0.9rem;
-  }
-
-  .details {
-    font-size: 0.85rem;
-  }
+  .container { padding: 1.3rem 0.2rem; max-width: 80vw; }
+  .title { font-size: 1.9rem; margin-bottom: 1.1rem; }
+  .timeline { padding-left: 1.5rem; }
+  .dot { width: 32px; height: 32px; left: -1.05rem; }
+  .logo { width: 18px; height: 18px; }
+  .content { padding: 0.7rem 0.5rem; }
+  .degree { font-size: 1.05rem; }
+  .school, .details { font-size: 0.85rem; }
 }
+
 
 /* ------- Petit laptop ------- */
 @media (min-width: 769px) and (max-width: 1023px) {
-  .container {
-    padding: 3.5rem 1.5rem;
-  }
-
-  .title {
-    font-size: 2.2rem;
-    margin-bottom: 2.5rem;
-  }
-
-  .timeline {
-    padding-left: 1.75rem;
-  }
-
-  .dot {
-    left: -0.7rem;
-    width: 14px;
-    height: 14px;
-  }
-
-  .content {
-    padding: 1rem 1.2rem;
-  }
-
-  .degree {
-    font-size: 1.05rem;
-  }
-
-  .school {
-    font-size: 0.95rem;
-  }
-
-  .details {
-    font-size: 0.85rem;
-  }
+  .container { padding: 3.5rem 1.5rem; max-width: 90vw;}
+  .title { font-size: 2.1rem;}
+  .timeline { padding-left: 1.8rem; }
+  .dot { width: 40px; height: 40px; left: -1.35rem;}
+  .logo { width: 24px; height: 24px;}
+  .content { padding: 1rem 1rem; }
+  .degree { font-size: 1.12rem; }
+  .school, .details { font-size: 0.95rem; }
 }

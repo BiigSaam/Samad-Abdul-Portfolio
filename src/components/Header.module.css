@@ -1,6 +1,6 @@
 .header {
-  background-color: rgb(49, 97, 185);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  background-color: var(--blue-primary);
+  box-shadow: 0 2px 8px rgba(23, 36, 71, 0.08);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -46,13 +46,17 @@
 
 .navList a {
   text-decoration: none;
+  font-family: var(--font-title);
   font-weight: 600;
-  color: rgb(255, 254, 254);
+  color: var(--white);
   transition: color 0.2s ease;
+  padding: 0.2em 0.5em;
+  border-radius: 4px;
 }
 
 .navList a:hover {
-  color: #ff9d00;
+  color: var(--orange-accent);
+  background: rgba(255,255,255,0.07);
 }
 
 .menuToggle {
@@ -75,17 +79,16 @@
     background: none;
     border: none;
     font-size: 2rem;
-    color: white;
+    color: var(--white);
     cursor: pointer;
     margin-left: auto;
     width: auto;
-
   }
 
   .navList {
     flex-direction: column;
     gap: 1rem;
-    background-color: rgb(49, 97, 185);
+    background-color: var(--blue-primary);
     position: absolute;
     top: 100%;
     left: 0;
@@ -100,6 +103,7 @@
 
   .navList a {
     font-size: 1rem;
+    width: 100%;
   }
 }
 
@@ -122,14 +126,14 @@
     background: none;
     border: none;
     font-size: 1.8rem;
-    color: white;
+    color: var(--white);
     cursor: pointer;
   }
 
   .navList {
     flex-direction: column;
     gap: 1rem;
-    background-color: rgb(49, 97, 185);
+    background-color: var(--blue-primary);
     position: absolute;
     top: 100%;
     left: 0;
@@ -140,6 +144,11 @@
 
   .navListOpen {
     display: flex;
+  }
+
+  .navList a {
+    font-size: 1rem;
+    width: 100%;
   }
 }
 

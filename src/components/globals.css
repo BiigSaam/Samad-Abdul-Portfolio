@@ -1,0 +1,56 @@
+:root {
+  --blue-primary: #1a5cd6;
+  --blue-dark: #172447;
+  --blue-light: #eaf2fb;
+  --orange-accent: #ff9d00;
+  --white: #fff;
+  --gray-text: #232323;
+
+  --font-title: 'Poppins', sans-serif;
+  --font-body: 'Segoe UI', sans-serif;
+}
+
+/* Reset de base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--gray-text);
+  background-color: var(--white);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-title);
+  font-weight: 700;
+  color: var(--blue-dark);
+}
+
+a {
+  color: var(--blue-primary);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: var(--orange-accent);
+}
+
+button {
+  font-family: var(--font-title);
+  background: var(--blue-primary);
+  color: var(--white);
+  border: none;
+  border-radius: 6px;
+  padding: 0.75em 1.5em;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: var(--orange-accent);
+}

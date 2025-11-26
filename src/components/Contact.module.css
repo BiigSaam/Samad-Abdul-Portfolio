@@ -1,83 +1,120 @@
 .contact {
-  background-color: #fff;
+  background: var(--white);
+  min-height: 80vh;
+  padding: 0;
 }
 
 .container {
-  max-width: 700px;
+  max-width: 520px;
   margin: 0 auto;
   padding: 4rem 1rem;
   box-sizing: border-box;
 }
 
 .title {
-  font-size: 2.2rem;
+  font-size: 2.15rem;
+  font-family: var(--font-title);
   font-weight: bold;
-  margin-bottom: 2rem;
+  margin-bottom: 1.65rem;
   text-align: center;
+  color: var(--blue-dark);
+  position: relative;
+}
+
+.title::after {
+  content: "";
+  display: block;
+  width: 54px;
+  height: 4px;
+  background: var(--orange-accent);
+  border-radius: 2px;
+  margin: 0.7rem auto 0 auto;
 }
 
 .form {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  margin-bottom: 2rem;
+  gap: 1.1rem;
+  margin-bottom: 1.8rem;
 }
 
 input,
 textarea {
-  padding: 0.8rem 1rem;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 1rem;
+  padding: 1rem 1.2rem;
+  border: 1.5px solid #ced8e4;
+  border-radius: 10px;
+  font-size: 1.02rem;
+  font-family: var(--font-body);
   width: 100%;
   box-sizing: border-box;
+  background: #f8fbfe;
+  outline: none;
+  transition: border 0.18s, box-shadow 0.21s;
   resize: vertical;
 }
 
+input:focus,
+textarea:focus {
+  border-color: var(--blue-primary);
+  box-shadow: 0 0 0 3px #336bff1a;
+  background: var(--white);
+}
+
 button {
-  padding: 0.8rem 1.2rem;
-  font-size: 1rem;
-  background-color: #f7931e;
-  color: white;
+  padding: 1rem 1.4rem;
+  font-size: 1.08rem;
+  background: var(--orange-accent);
+  color: var(--white);
   border: none;
-  border-radius: 8px;
+  border-radius: 12px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  box-shadow: 0 2px 16px rgba(252, 114, 22, 0.09);
+  transition: background 0.18s, transform 0.13s;
   align-self: flex-start;
+  margin-top: 0.12rem;
 }
 
 button:hover {
-  background-color: #e67e00;
+  background: #fdab45;
+  transform: translateY(-2px) scale(1.035);
 }
 
 .links {
   display: flex;
   justify-content: center;
-  font-size: 1.1rem;
-  gap: 1.5rem;
+  gap: 1.13rem;
   flex-wrap: wrap;
+  margin-top: 3.5rem;
+  font-size: 1.06rem;
 }
 
 .links a {
   font-weight: bold;
-  color: #1a5cd6;
+  color: var(--blue-primary);
   text-decoration: none;
-  transition: text-decoration 0.2s ease, font-size 0.3s ease, color 0.3s ease;
+  padding: 0.38em 1.2em;
+  border-radius: 22px;
+  background: var(--blue-light);
+  transition: color 0.18s, background 0.18s, box-shadow 0.18s;
 }
 
 .links a:hover {
-  font-size: 1.2rem;
-  color: #ff9d00;
+  color: var(--white);
+  background: var(--orange-accent);
+  box-shadow: 0 0 0 3px #ff9d0013;
 }
 
 .feedback {
   margin-top: 1rem;
-  font-size: 1rem;
+  font-size: 1.04rem;
   padding: 0.75rem 1rem;
-  border-radius: 6px;
-  font-weight: 500;
-  transition: opacity 0.5s ease-in-out;
+  border-radius: 9px;
+  font-weight: 600;
+  transition: opacity 0.46s ease-in-out;
   opacity: 1;
+  text-align: center;
 }
 
 .success {
@@ -93,89 +130,25 @@ button:hover {
 }
 
 @media (max-width: 480px) {
-  .container {
-    padding: 2.5rem 1rem;
-  }
-
-  .title {
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
-  }
-
-  input,
-  textarea {
-    font-size: 0.95rem;
-    padding: 0.7rem 0.9rem;
-  }
-
-  button {
-    font-size: 0.95rem;
-    padding: 0.7rem 1rem;
-    width: 100%;
-  }
-
-  .links {
-    flex-direction: column;
-    gap: 0.8rem;
-    align-items: center;
-    font-size: 1rem;
-  }
-
-  .links a {
-    font-size: 1rem;
-  }
-
-  .feedback {
-    font-size: 0.95rem;
-  }
+  .container { padding: 2rem 0.12rem;}
+  .title { font-size: 1.35rem;}
+  .title::after { width: 22px; height: 2px;}
+  .form { gap: 0.65rem;}
+  input, textarea { font-size: 0.97rem; padding: 0.67rem 0.62rem;}
+  button { width: 100%; font-size: 1rem;}
+  .links { gap: 0.54rem; font-size: 0.97rem;}
+  .links a { font-size: 1rem; }
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
-  .container {
-    padding: 3.5rem 1.5rem;
-  }
-
-  .title {
-    font-size: 2rem;
-  }
-
-  input,
-  textarea {
-    font-size: 1rem;
-    padding: 0.75rem 1rem;
-  }
-
-  button {
-    font-size: 1rem;
-    padding: 0.75rem 1.1rem;
-  }
-
-  .links {
-    gap: 1.2rem;
-    justify-content: center;
-    font-size: 1.05rem;
-  }
-
-  .links a {
-    font-size: 1.05rem;
-  }
-
-  .feedback {
-    font-size: 1rem;
-  }
+  .container { padding: 3.2rem 0.5rem;}
+  .title { font-size: 1.7rem;}
+  .form { gap: 0.85rem;}
+  .links { gap: 1.13rem;}
 }
 
 @media (min-width: 769px) and (max-width: 1023px) {
-  .container {
-    padding: 4rem 2rem;
-  }
-
-  .title {
-    font-size: 2rem;
-  }
-
-  .links {
-    gap: 1.2rem;
-    font-size: 1.05rem;
-  }
+  .container { padding: 4rem 2rem;}
+  .title { font-size: 2.06rem;}
+  .form { gap: 1rem;}
 }

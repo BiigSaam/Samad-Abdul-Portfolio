@@ -1,14 +1,9 @@
 import styles from './Skills.module.css'
 
-type SkillCategory = {
-  title: string;
-  items: string[];
-}
-
-const hardSkills: SkillCategory[] = [
+const hardSkills = [
   {
     title: "Frontend",
-    items: ["HTML", "CSS", "JavaScript", "TypeScript", "ReactJS", "NextJS", "Bootstrap", "Nunjucks", "Saas", "Twig"],
+    items: ["HTML", "CSS", "JavaScript", "TypeScript", "ReactJS", "NextJS", "Bootstrap", "Nunjucks", "Sass", "Twig"],
   },
   {
     title: "Backend",
@@ -26,47 +21,41 @@ const hardSkills: SkillCategory[] = [
     title: "Autres",
     items: ["Kotlin", "React Native", "C/C++", "WordPress", "SEO", "UX Design", "Performance Web"],
   }
-]
-
+];
 const softSkills = [
-  "Innovation", "Veille technologique", "Esprit d’équipe", 
-  "Feedback constructif", "Polyvalence", "Autonomie",
-  "Assiduité", "Communication", "Créativité",
-]
+  "Innovation", "Veille technologique", "Esprit d’équipe", "Feedback constructif", "Polyvalence", "Autonomie", "Assiduité", "Communication", "Créativité"
+];
 
-const Skills = () => {
-  return (
-    <section id="skills" className={styles.skills}>
-      <div className={styles.container}>
-        <h2 className={styles.title}>Compétences</h2>
-
-        <div className={styles.section}>
-          <h3 className={styles.subtitle}>Hard Skills</h3>
-          <div className={styles.grid}>
-            {hardSkills.map((cat, index) => (
-              <div key={index} className={styles.card}>
-                <h4 className={styles.cardTitle}>{cat.title}</h4>
-                <ul className={styles.hardList}>
-                  {cat.items.map((skill, i) => (
-                    <li key={i} className={styles.hardTag}>{skill}</li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <div className={styles.softSkillsSection}>
-            <h3 className={styles.subtitle}>Soft Skills</h3>
-            <div className={styles.softGrid}>
-                {softSkills.map((skill, i) => (
-                <span key={i} className={`${styles.softTag}`}>{skill}</span>
+const Skills = () => (
+  <section className={styles.skills} id="skills">
+    <div className={styles.container}>
+      <h2 className={styles.title}>Compétences</h2>
+      <div className={styles.underline}></div>
+      <div className={styles.section}>
+        <h3 className={styles.subtitle}>Hard Skills</h3>
+        <div className={styles.grid}>
+          {hardSkills.map((cat, index) => (
+            <div className={styles.card} key={cat.title + index}>
+              <span className={styles.cardTitle}>{cat.title}</span>
+              <ul className={styles.hardList}>
+                {cat.items.map((skill, i) => (
+                  <li className={styles.hardTag} key={skill + i}>{skill}</li>
                 ))}
+              </ul>
             </div>
+          ))}
         </div>
       </div>
-    </section>
-  )
-}
+      <div className={styles.section}>
+        <h3 className={styles.subtitle}>Soft Skills</h3>
+        <div className={styles.softGrid}>
+          {softSkills.map((skill, i) => (
+            <div className={styles.softTag} key={skill + i}>{skill}</div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+);
 
 export default Skills;
