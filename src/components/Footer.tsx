@@ -50,7 +50,7 @@ const Footer = () => {
               <FaLinkedin />
             </a>
             <a
-              href="mailto:ton.mail@example.com"
+              href="mailto:samad.abdul.contact@gmail.com"
               className={styles.socialLink}
             >
               <FaEnvelope />
