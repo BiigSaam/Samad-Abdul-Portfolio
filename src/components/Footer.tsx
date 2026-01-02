@@ -34,7 +34,7 @@ const Footer = () => {
           <h4 className={styles.sectionTitle}>Réseaux</h4>
           <div className={styles.socialRow}>
             <a
-              href="https://github.com/tonprofil"
+              href="https://github.com/BiigSaam"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.socialLink}
@@ -42,7 +42,7 @@ const Footer = () => {
               <FaGithub />
             </a>
             <a
-              href="https://linkedin.com/in/tonprofil"
+              href="https://www.linkedin.com/in/samad-abdul-developpeur-web-full-stack/"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.socialLink}
